@@ -1,0 +1,22 @@
+server:
+  port: 8081
+
+spring:
+  main:
+    banner-mode: "off"
+
+eureka:
+  instance:
+    instanceId: ${app.name}
+  server:
+    enableSelfPreservation: false
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+
+logging:
+  level:
+    com:
+      netflix:
+        eureka: OFF
+        discovery: OFF

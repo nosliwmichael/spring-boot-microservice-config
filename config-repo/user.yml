@@ -1,0 +1,11 @@
+server:
+  port: 0
+
+eureka:
+  instance:
+    instanceId: ${eureka.instance.hostname}-${app.name}-${random.value}
+    leaseRenewalIntervalInSeconds: 1
+    leaseExpirationDurationInSeconds: 2
+  client:
+    registerWithEureka: true
+    fetchRegistry: true

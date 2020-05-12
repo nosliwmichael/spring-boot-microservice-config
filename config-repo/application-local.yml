@@ -1,0 +1,9 @@
+spring:
+  main:
+    banner-mode: "off"
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
