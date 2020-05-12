@@ -1,9 +1,5 @@
 server:
-  port: 8081
-
-spring:
-  main:
-    banner-mode: "off"
+  port: ${discovery.service.port}
 
 eureka:
   instance:

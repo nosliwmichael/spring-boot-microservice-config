@@ -1,0 +1,15 @@
+---
+spring.profiles: local, dev
+discovery.service.port: 8081
+gateway.service.port: 8082
+user.service.port: 0
+
+eureka:
+  instance:
+    hostname: localhost
+
+---
+spring.profiles: local, dev, prod
+eureka:
+  client:
+      defaultZone: http://${eureka.instance.hostname}:${discovery.service.port}/eureka/
