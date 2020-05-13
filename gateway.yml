@@ -3,9 +3,9 @@ server:
 
 eureka:
   instance:
-    instanceId: ${eureka.instance.hostname}:${server.port}-gateway-${random.value}
+    instanceId: ${eureka.instance.hostname}:${server.port}-${spring.application.name}-${random.value}
   client:
-    registerWithEureka: true
+    registerWithEureka: false
     fetchRegistry: true
 
 spring:
@@ -16,6 +16,6 @@ spring:
           enabled: true
       routes:
       - id: user
-        uri: lb://user
+        uri: lb://user-api
         predicates:
-        - Path=/user/**
+        - Path=/user-api/**

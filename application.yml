@@ -1,18 +1,21 @@
 ---
 spring.profiles: local, dev
+
+hostname: localhost
+
+# PORT NUMBERS #
 discovery.service.port: 8081
 gateway.service.port: 8082
 user.service.port: 0
+aperture.webapp.port: 8099
 
-eureka:
-  instance:
-    hostname: localhost
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:${discovery.service.port}/eureka/
 
 ---
-spring.profiles: prod
+spring.profiles: local, dev, prod
+
+# ENDPOINTS #
+gateway.endpoint: http://${hostname}:${gateway.service.port}
+
 eureka:
   instance:
     hostname: ${hostname}

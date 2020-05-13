@@ -3,9 +3,9 @@ server:
 
 eureka:
   instance:
-    instanceId: ${eureka.instance.hostname}:${server.port}-user-${random.value}
+    instanceId: ${eureka.instance.hostname}:${server.port}-${spring.application.name}-${random.value}
     leaseRenewalIntervalInSeconds: 1
     leaseExpirationDurationInSeconds: 2
   client:
     registerWithEureka: true
-    fetchRegistry: true
+    fetchRegistry: false

@@ -1,0 +1,21 @@
+server:
+  port: ${aperture.webapp.port}
+  servlet:
+    context-path: /${spring.application.name}
+
+spring:
+  thymeleaf:
+    enabled: true
+    check-template: true
+    check-template-location: true
+    prefix: classpath:/templates/
+    suffix: .html
+    mode: HTML5
+    encoding: UTF-8
+    content-type: text/html
+    cache: false
+
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: false

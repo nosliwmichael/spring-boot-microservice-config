@@ -3,7 +3,7 @@ server:
 
 eureka:
   instance:
-    instanceId: ${eureka.instance.hostname}:${server.port}-discovery-${random.value}
+    instanceId: ${eureka.instance.hostname}:${server.port}-${spring.application.name}-${random.value}
   server:
     enableSelfPreservation: false
   client:
