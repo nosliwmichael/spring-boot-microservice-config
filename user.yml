@@ -3,7 +3,7 @@ server:
 
 eureka:
   instance:
-    instanceId: ${eureka.instance.hostname}-${app.name}-${random.value}
+    instanceId: ${eureka.instance.hostname}:${server.port}-user-${random.value}
     leaseRenewalIntervalInSeconds: 1
     leaseExpirationDurationInSeconds: 2
   client:

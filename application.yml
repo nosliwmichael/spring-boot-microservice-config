@@ -7,9 +7,15 @@ user.service.port: 0
 eureka:
   instance:
     hostname: localhost
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:${discovery.service.port}/eureka/
 
 ---
-spring.profiles: local, dev, prod
+spring.profiles: prod
 eureka:
+  instance:
+    hostname: ${hostname}
   client:
-      defaultZone: http://${eureka.instance.hostname}:${discovery.service.port}/eureka/
+    serviceUrl:
+      defaultZone: http://${hostname}:${discovery.service.port}/eureka/

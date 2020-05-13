@@ -3,7 +3,7 @@ server:
 
 eureka:
   instance:
-    instanceId: ${app.name}
+    instanceId: ${eureka.instance.hostname}:${server.port}-discovery-${random.value}
   server:
     enableSelfPreservation: false
   client:

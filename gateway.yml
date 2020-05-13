@@ -3,7 +3,7 @@ server:
 
 eureka:
   instance:
-    instanceId: ${eureka.instance.hostname}:${server.port}/${app.name}
+    instanceId: ${eureka.instance.hostname}:${server.port}-gateway-${random.value}
   client:
     registerWithEureka: true
     fetchRegistry: true
