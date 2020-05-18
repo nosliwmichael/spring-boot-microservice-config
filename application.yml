@@ -19,6 +19,7 @@ gateway.endpoint: http://${hostname}:${gateway.service.port}
 eureka:
   instance:
     hostname: ${hostname}
+    instanceId: ${hostname}:${server.port}-${spring.application.name}-${random.value}
   client:
     serviceUrl:
       defaultZone: http://${hostname}:${discovery.service.port}/eureka/
