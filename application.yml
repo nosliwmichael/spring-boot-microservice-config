@@ -6,9 +6,7 @@ hostname: localhost
 # PORT NUMBERS #
 discovery.service.port: 8081
 gateway.service.port: 8082
-user.service.port: 0
 aperture.webapp.port: 8099
-
 
 ---
 spring.profiles: local, dev, prod

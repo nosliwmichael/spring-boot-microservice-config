@@ -1,5 +1,5 @@
 server:
-  port: ${user.service.port}
+  port: ${user.service.port:0}
 
 eureka:
   instance:

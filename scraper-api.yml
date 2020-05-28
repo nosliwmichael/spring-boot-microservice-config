@@ -1,0 +1,10 @@
+server:
+  port: ${scraper.service.port:0}
+
+eureka:
+  instance:
+    leaseRenewalIntervalInSeconds: 1
+    leaseExpirationDurationInSeconds: 2
+  client:
+    registerWithEureka: true
+    fetchRegistry: false
