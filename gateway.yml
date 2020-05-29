@@ -22,3 +22,12 @@ spring:
             args:
               name: myCircuitBreaker
               fallbackUri: forward:/serviceFallback
+      - id: scraper
+        uri: lb://scraper-api
+        predicates:
+          - Path=/scraper-api/**
+        filters:
+          - name: CircuitBreaker
+            args:
+              name: myCircuitBreaker
+              fallbackUri: forward:/serviceFallback
